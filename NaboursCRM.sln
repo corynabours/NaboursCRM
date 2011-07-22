@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaboursCRM.UI", "NaboursCRM\NaboursCRM.UI.csproj", "{5695002C-77D3-4328-B856-9CF3580838C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaboursCRM.DataAccess", "NaboursCRM.DataAccess\NaboursCRM.DataAccess.csproj", "{D37044A0-38D9-4814-8F50-2ACB411089A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaboursCRM.Model", "NaboursCRM.Model\NaboursCRM.Model.csproj", "{B59FF64A-AB66-45CD-B8B0-EA7E1C6C0F85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5695002C-77D3-4328-B856-9CF3580838C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5695002C-77D3-4328-B856-9CF3580838C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5695002C-77D3-4328-B856-9CF3580838C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5695002C-77D3-4328-B856-9CF3580838C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D37044A0-38D9-4814-8F50-2ACB411089A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D37044A0-38D9-4814-8F50-2ACB411089A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D37044A0-38D9-4814-8F50-2ACB411089A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D37044A0-38D9-4814-8F50-2ACB411089A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B59FF64A-AB66-45CD-B8B0-EA7E1C6C0F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59FF64A-AB66-45CD-B8B0-EA7E1C6C0F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59FF64A-AB66-45CD-B8B0-EA7E1C6C0F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59FF64A-AB66-45CD-B8B0-EA7E1C6C0F85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

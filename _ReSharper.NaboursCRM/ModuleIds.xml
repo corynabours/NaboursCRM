@@ -1,0 +1,7 @@
+<Modules>
+  <Module PersistentId="5695002C-77D3-4328-B856-9CF3580838C7" ModuleId="NaboursCRM" />
+  <Module PersistentId="D37044A0-38D9-4814-8F50-2ACB411089A2" ModuleId="NaboursCRM.DataAccess" />
+  <Module PersistentId="B59FF64A-AB66-45CD-B8B0-EA7E1C6C0F85" ModuleId="NaboursCRM.Model" />
+  <Module PersistentId="87C4E594-8E52-4774-8DF6-1380896CFA53" ModuleId="NaboursCRM.Model.Tests" />
+  <Module PersistentId="69412C2D-8125-4B92-A55C-DE8188A5C684" ModuleId="NaboursCRM.DataAccess.Tests" />
+</Modules>
