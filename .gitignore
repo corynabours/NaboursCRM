@@ -1,0 +1,14 @@
+[Rr]elease
+[Dd]ebug
+*/bin
+**/[Bb]in/*.dll
+**/[Bb]in/*.pdb
+**/[Bb]in/*.xml
+_ReSharper.*
+*.user
+*.suo
+*.cache
+**/[Bb]in/**/*.*.dll
+**/*TestResults.xml
+**/*UnitTests.xml
+*VisualState.xml
