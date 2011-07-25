@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>67ac5a26-7296-4359-8b1b-ad96ecf04231</ProjectGuid>
+    <ProjectGuid>{87C4E594-8E52-4774-8DF6-1380896CFA53}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NaboursCRM.Model.Tests</RootNamespace>
