@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using NaboursCRM.Model;
+using NaboursCRM.Model.Repositories;
 using NHibernate.Criterion;
 
 namespace NaboursCRM.DataAccess
 {
-    public class PersonData
+    public class PersonData : PersonRepository
     {
         public IList<Person> GetAll()
         {

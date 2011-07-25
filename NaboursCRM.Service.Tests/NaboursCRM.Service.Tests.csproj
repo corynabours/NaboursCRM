@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B59FF64A-AB66-45CD-B8B0-EA7E1C6C0F85}</ProjectGuid>
+    <ProjectGuid>{FE701411-D547-4DCE-854D-A7A836D410DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NaboursCRM.Model</RootNamespace>
-    <AssemblyName>NaboursCRM.Model</AssemblyName>
+    <RootNamespace>NaboursCRM.Service.Tests</RootNamespace>
+    <AssemblyName>NaboursCRM.Service.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\NUnitFramework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\ThirdParty\RhinoMocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,14 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="AddressType.cs" />
-    <Compile Include="Country.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="Phone.cs" />
-    <Compile Include="PhoneType.cs" />
+    <Compile Include="ContactsTests.cs" />
+    <Compile Include="GenericServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\PersonRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NaboursCRM.Model\NaboursCRM.Model.csproj">
+      <Project>{B59FF64A-AB66-45CD-B8B0-EA7E1C6C0F85}</Project>
+      <Name>NaboursCRM.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NaboursCRM.Service\NaboursCRM.Service.csproj">
+      <Project>{23F7ABF6-8096-4887-BB13-680EC97A1B0D}</Project>
+      <Name>NaboursCRM.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

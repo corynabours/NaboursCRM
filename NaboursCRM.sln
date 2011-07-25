@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaboursCRM.Model.Tests", "N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaboursCRM.DataAccess.Tests", "NaboursCRM.DataAccess.Tests\NaboursCRM.DataAccess.Tests.csproj", "{69412C2D-8125-4B92-A55C-DE8188A5C684}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaboursCRM.Service", "NaboursCRM.Service\NaboursCRM.Service.csproj", "{23F7ABF6-8096-4887-BB13-680EC97A1B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaboursCRM.Service.Tests", "NaboursCRM.Service.Tests\NaboursCRM.Service.Tests.csproj", "{FE701411-D547-4DCE-854D-A7A836D410DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{69412C2D-8125-4B92-A55C-DE8188A5C684}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69412C2D-8125-4B92-A55C-DE8188A5C684}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69412C2D-8125-4B92-A55C-DE8188A5C684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F7ABF6-8096-4887-BB13-680EC97A1B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F7ABF6-8096-4887-BB13-680EC97A1B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F7ABF6-8096-4887-BB13-680EC97A1B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F7ABF6-8096-4887-BB13-680EC97A1B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE701411-D547-4DCE-854D-A7A836D410DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE701411-D547-4DCE-854D-A7A836D410DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE701411-D547-4DCE-854D-A7A836D410DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE701411-D547-4DCE-854D-A7A836D410DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
