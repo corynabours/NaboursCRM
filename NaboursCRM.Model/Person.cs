@@ -1,21 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace NaboursCRM.Model
 {
     [Serializable]
+    [DataContract]
     public class Person
     {
-        public Person()
+        private IList<Phone> _phoneNumbers = new List<Phone>();
+        private IList<Address> _addresses = new List<Address>();
+
+        [DataMember]
+        public virtual Guid Id { get; set; }
+
+        [DataMember]
+        public virtual string FirstName { get; set; }
+
+        [DataMember]
+        public virtual string LastName { get; set; }
+
+        public virtual IList<Phone> PhoneNumbers
         {
-            PhoneNumbers = new List<Phone>();
-            Addresses = new List<Address>();
+            get { return _phoneNumbers; }
+            set { _phoneNumbers = value; }
         }
 
-        public virtual Guid Id { get; set; }
-        public virtual string FirstName { get; set; }
-        public virtual string LastName { get; set; }
-        public virtual IList<Phone> PhoneNumbers { get; private set; }
-        public virtual IList<Address> Addresses { get; private set; }
+        public virtual IList<Address> Addresses
+        {
+            get { return _addresses; }
+            set { _addresses = value; }
+        }
     }
 }

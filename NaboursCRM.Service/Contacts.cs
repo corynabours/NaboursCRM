@@ -25,6 +25,11 @@ namespace NaboursCRM.Service
         public List<Person> GetContacts()
         {
             var result = _repository.GetAll();
+            foreach (var contact in result)
+            {
+                contact.Addresses = new List<Address>();
+                contact.PhoneNumbers = new List<Phone>();
+            }
             return (List<Person>)result;
         }
     }
