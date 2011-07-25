@@ -63,5 +63,10 @@ namespace NaboursCRM.DataAccess
             session.SaveOrUpdate(person);
             transaction.Commit();
         }
+
+        public void RenewSession()
+        {
+            NHibernateFactory.RenewSession();
+        }
     }
 }

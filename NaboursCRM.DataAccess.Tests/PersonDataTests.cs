@@ -20,6 +20,7 @@ namespace NaboursCRM.DataAccess.Tests
         {
             var count = _repository.GetCountOfAll();
             var addedId = ShouldBeAbleToAddTestUser(count);
+            _repository.RenewSession();
             ShouldBeAbleToGetPersonsAndCountOfPersons(count + 1);
             ShouldBeAbleToGetTestPerson(addedId);
             ShouldBeAbleToUpdatePerson(addedId);
@@ -56,7 +57,18 @@ namespace NaboursCRM.DataAccess.Tests
             Assert.AreEqual(newId,  person.Id);
             Assert.AreEqual("Test", person.FirstName);
             Assert.AreEqual("User", person.LastName);
-            Assert.AreEqual(1, person.PhoneNumbers.Count);
+            Assert.AreEqual(3, person.PhoneNumbers.Count);
+            var typeCount = new int[3];
+            foreach (var phone in person.PhoneNumbers)
+            {
+                Assert.AreEqual("5551212", phone.PhoneNumber);
+                typeCount[phone.Type.Id - 1]++;
+            }
+            foreach (var count in typeCount)
+            {
+                Assert.AreEqual(1, count);
+            }
+
         }
 
         private Guid ShouldBeAbleToAddTestUser(int previousCount)
@@ -66,12 +78,26 @@ namespace NaboursCRM.DataAccess.Tests
                                     FirstName = "Test",
                                     LastName = "User"
                                 };
-            var newPhone = new Phone
+            var newHomePhone = new Phone
                                {
-                                   PhoneNumber = "5551212"
+                                   PhoneNumber = "5551212", Type = PhoneType.Home
                                };
+            var newWorkPhone = new Phone
+            {
+                PhoneNumber = "5551212",
+                Type = PhoneType.Work
+            };
+            var newCellPhone = new Phone
+            {
+                PhoneNumber = "5551212",
+                Type = PhoneType.Cell
+            };
 
-            newPerson.PhoneNumbers.Add(newPhone);
+
+
+            newPerson.PhoneNumbers.Add(newHomePhone);
+            newPerson.PhoneNumbers.Add(newWorkPhone);
+            newPerson.PhoneNumbers.Add(newCellPhone);
             var newId = _repository.AddPerson(newPerson);
             var count = _repository.GetCountOfAll();
             Assert.AreEqual(previousCount + 1, count);

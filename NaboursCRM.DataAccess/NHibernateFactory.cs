@@ -26,5 +26,11 @@ namespace NaboursCRM.DataAccess
         {
             return _session ?? (_session = SessionFactory.OpenSession());
         }
+
+        public static void RenewSession()
+        {
+            _session.Close();
+            _session = null;
+        }
     }
 }

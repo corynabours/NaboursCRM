@@ -3,11 +3,10 @@
                    assembly="NaboursCRM.Model"
                    namespace="NaboursCRM.Model">
 
-  <class name="Phone" table="PersonPhone">
-    <id name="Id" column="PersonPhoneId">
-      <generator class="guid"/>
+  <class name="PhoneType" table="PhoneType">
+    <id name="Id" column="PhoneTypeId">
+      <generator class="increment"/>
     </id>
-    <property name="PhoneNumber"/>
-    <many-to-one name="Type" class="PhoneType" column="PhoneTypeId" not-null="true" />
+    <property name="Description" column="PhoneType"/>
   </class>
 </hibernate-mapping>
