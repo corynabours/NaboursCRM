@@ -56,6 +56,7 @@ namespace NaboursCRM.DataAccess.Tests
             Assert.AreEqual(newId,  person.Id);
             Assert.AreEqual("Test", person.FirstName);
             Assert.AreEqual("User", person.LastName);
+            Assert.AreEqual(1, person.PhoneNumbers.Count);
         }
 
         private Guid ShouldBeAbleToAddTestUser(int previousCount)
@@ -65,6 +66,12 @@ namespace NaboursCRM.DataAccess.Tests
                                     FirstName = "Test",
                                     LastName = "User"
                                 };
+            var newPhone = new Phone
+                               {
+                                   PhoneNumber = "5551212"
+                               };
+
+            newPerson.PhoneNumbers.Add(newPhone);
             var newId = _repository.AddPerson(newPerson);
             var count = _repository.GetCountOfAll();
             Assert.AreEqual(previousCount + 1, count);

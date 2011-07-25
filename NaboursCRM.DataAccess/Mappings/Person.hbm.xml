@@ -9,5 +9,10 @@
     </id>
     <property name="FirstName"/>
     <property name="LastName"/>
+
+    <bag name="PhoneNumbers" cascade="all" lazy="false">
+      <key column="PersonId"/>
+      <one-to-many class="Phone"/>
+    </bag>
   </class>
 </hibernate-mapping>

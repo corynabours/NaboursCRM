@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="NaboursCRM.Model"
+                   namespace="NaboursCRM.Model">
+
+  <class name="Phone" table="PersonPhone">
+    <id name="Id" column="PersonPhoneId">
+      <generator class="guid"/>
+    </id>
+    <property name="PhoneNumber"/>
+  </class>
+</hibernate-mapping>
