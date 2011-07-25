@@ -11,11 +11,11 @@ namespace NaboursCRM.DataAccess
         public IList<Person> GetAll()
         {
             var session = NHibernateFactory.OpenSession();
-            var ivrExtensions = session
+            var persons = session
                 .CreateCriteria(typeof (Person))
                 .AddOrder(Order.Asc("LastName"))
                 .List<Person>();
-            return ivrExtensions;
+            return persons;
         }
 
         public int GetCountOfAll()
