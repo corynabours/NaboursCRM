@@ -14,5 +14,10 @@
       <key column="PersonId"/>
       <one-to-many class="Phone"/>
     </bag>
+
+    <bag name="Addresses" table="PersonAddress" cascade="all" lazy="true">
+      <key column="PersonId"/>
+      <many-to-many class="Address" column="AddressId"/>
+    </bag>
   </class>
 </hibernate-mapping>

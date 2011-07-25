@@ -60,6 +60,8 @@
     <EmbeddedResource Include="Mappings\Phone.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Mappings\AddressType.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Address.hbm.xml" />
     <EmbeddedResource Include="Mappings\PhoneType.hbm.xml" />
     <Content Include="Scripts\NaboursCRMData.sql" />
   </ItemGroup>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="NaboursCRM.Model"
+                   namespace="NaboursCRM.Model">
+
+  <class name="Address" table="Address">
+    <id name="Id" column="AddressId">
+      <generator class="guid"/>
+    </id>
+    <property name="ExtraLine1"/>
+    <property name="ExtraLine2"/>
+    <property name="StreetAddress"/>
+    <property name="City"/>
+    <property name="State"/>
+    <property name="PostalCode"/>
+    <many-to-one name="Type" class="AddressType" column="AddressTypeId" not-null="true" />
+  </class>
+</hibernate-mapping>

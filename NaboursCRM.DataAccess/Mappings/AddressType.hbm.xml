@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="NaboursCRM.Model"
+                   namespace="NaboursCRM.Model">
+
+  <class name="AddressType" table="AddressType">
+    <id name="Id" column="AddressTypeId">
+      <generator class="identity"/>
+    </id>
+    <property name="Description" column="AddressType"/>
+  </class>
+</hibernate-mapping>
+
