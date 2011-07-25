@@ -5,6 +5,7 @@ namespace NaboursCRM.DataAccess
     public class NHibernateFactory
     {
         private static ISessionFactory _sessionFactory;
+        private static ISession _session;
 
         private static ISessionFactory SessionFactory
         {
@@ -23,7 +24,7 @@ namespace NaboursCRM.DataAccess
 
         public static ISession OpenSession()
         {
-            return SessionFactory.OpenSession();
+            return _session ?? (_session = SessionFactory.OpenSession());
         }
     }
 }

@@ -10,7 +10,7 @@
     <property name="FirstName"/>
     <property name="LastName"/>
 
-    <bag name="PhoneNumbers" cascade="all" lazy="false">
+    <bag name="PhoneNumbers" cascade="all" lazy="true">
       <key column="PersonId"/>
       <one-to-many class="Phone"/>
     </bag>
