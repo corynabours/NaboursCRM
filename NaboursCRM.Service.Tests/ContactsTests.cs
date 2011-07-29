@@ -40,5 +40,51 @@ namespace NaboursCRM.Service.Tests
             Assert.AreEqual(results, contacts);
         }
 
+        [Test]
+        public void ShouldBeAbleToGetAContact()
+        {
+            var samplePerson = new Person();
+            var id = Guid.NewGuid();
+            _repository.Expect(r => r.GetPerson(id)).Return(samplePerson);
+            _mocks.ReplayAll();
+            var contact = _contactsService.GetContact(id.ToString());
+            _mocks.VerifyAll();
+            Assert.AreSame(samplePerson, contact);
+        }
+
+        [Test]
+        public void ShouldBeAbleToAddAContact()
+        {
+            var samplePerson = new Person();
+            var id = Guid.NewGuid();
+            _repository.Expect(r => r.AddPerson(samplePerson)).Return(id).Repeat.Twice();
+            _mocks.ReplayAll();
+            _contactsService.AddPerson(samplePerson);
+            _contactsService.AddPersonForJsonp(samplePerson);
+            _mocks.VerifyAll();
+        }
+
+        [Test]
+        public void ShouldBeAbleToUpdateAContact()
+        {
+            var samplePerson = new Person();
+            var id = Guid.NewGuid();
+            _repository.Expect(r => r.UpdatePerson(samplePerson)).Repeat.Twice();
+            _mocks.ReplayAll();
+            _contactsService.UpdatePerson(id.ToString(), samplePerson);
+            _contactsService.UpdatePersonForJsonp(id.ToString(), samplePerson);
+            _mocks.VerifyAll();
+        }
+
+        [Test]
+        public void ShouldBeAbleToDeleteAContact()
+        {
+            var id = Guid.NewGuid();
+            _repository.Expect(r => r.DeletePerson(id)).Repeat.Twice();
+            _mocks.ReplayAll();
+            _contactsService.DeletePerson(id.ToString());
+            _contactsService.DeletePersonForJsonp(id.ToString());
+            _mocks.VerifyAll();
+        }
     }
 }
