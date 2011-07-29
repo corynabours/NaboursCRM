@@ -15,7 +15,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaboursCRM.Service", "Nabou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaboursCRM.Service.Tests", "NaboursCRM.Service.Tests\NaboursCRM.Service.Tests.csproj", "{FE701411-D547-4DCE-854D-A7A836D410DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaboursCRM.UI.Javascript.Tests", "NaboursCRM.UI.Javascript.Tests\NaboursCRM.UI.Javascript.Tests.csproj", "{9F46B516-862A-4F86-9A36-72B1E06B5E48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{833248DB-A239-47A8-85DB-FF10F35E29D5}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		NaboursCRM.vsmdi = NaboursCRM.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = NaboursCRM.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -49,6 +61,10 @@ Global
 		{FE701411-D547-4DCE-854D-A7A836D410DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE701411-D547-4DCE-854D-A7A836D410DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE701411-D547-4DCE-854D-A7A836D410DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F46B516-862A-4F86-9A36-72B1E06B5E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F46B516-862A-4F86-9A36-72B1E06B5E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F46B516-862A-4F86-9A36-72B1E06B5E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F46B516-862A-4F86-9A36-72B1E06B5E48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
