@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contacts.cs" />
-    <Compile Include="IContacts.cs" />
+    <Compile Include="PersonService.cs" />
+    <Compile Include="IPersonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

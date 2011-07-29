@@ -8,11 +8,11 @@ using Rhino.Mocks;
 namespace NaboursCRM.Service.Tests
 {
     [TestFixture]
-    public class ContactsTests
+    public class PersonServiceTests
     {
 
         protected MockRepository _mocks;
-        protected Contacts _contactsService;
+        protected PersonService _contactsService;
         protected PersonRepository _repository;
 
         [SetUp]
@@ -20,13 +20,13 @@ namespace NaboursCRM.Service.Tests
         {
             _mocks = new MockRepository();
             _repository = _mocks.DynamicMock<PersonRepository>();
-            _contactsService = new Contacts(_repository);
+            _contactsService = new PersonService(_repository);
         }
 
         [Test]
         public void ShouldBeCreatable()
         {
-            Assert.DoesNotThrow(delegate { new Contacts(); });
+            Assert.DoesNotThrow(delegate { new PersonService(); });
         }
 
         [Test]
@@ -35,7 +35,7 @@ namespace NaboursCRM.Service.Tests
             var results = new List<Person>();
             _repository.Expect(r => r.GetAll()).Return(results);
             _mocks.ReplayAll();
-            var contacts = _contactsService.GetContacts();
+            var contacts = _contactsService.GetPeople();
             _mocks.VerifyAll();
             Assert.AreEqual(results, contacts);
         }
@@ -47,7 +47,7 @@ namespace NaboursCRM.Service.Tests
             var id = Guid.NewGuid();
             _repository.Expect(r => r.GetPerson(id)).Return(samplePerson);
             _mocks.ReplayAll();
-            var contact = _contactsService.GetContact(id.ToString());
+            var contact = _contactsService.GetPerson(id.ToString());
             _mocks.VerifyAll();
             Assert.AreSame(samplePerson, contact);
         }

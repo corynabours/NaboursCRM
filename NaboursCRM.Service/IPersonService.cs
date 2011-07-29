@@ -7,15 +7,15 @@ using NaboursCRM.Model;
 namespace NaboursCRM.Service
 {
     [ServiceContract]
-    public interface IContacts
+    public interface IPersonService
     {
         [OperationContract]
         [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "/")]
-        List<Person> GetContacts();
+        List<Person> GetPeople();
 
         [OperationContract]
         [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "/{id}")]
-        Person GetContact(string id);
+        Person GetPerson(string id);
 
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, UriTemplate = "/")]

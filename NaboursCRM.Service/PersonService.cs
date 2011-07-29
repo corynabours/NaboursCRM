@@ -8,29 +8,29 @@ using NaboursCRM.Model.Repositories;
 namespace NaboursCRM.Service
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    public class Contacts : IContacts
+    public class PersonService : IPersonService
     {
         private readonly PersonRepository _repository;
 
-        public Contacts() : this(new PersonData())
+        public PersonService() : this(new PersonData())
         {
             
         }
 
-        public Contacts(PersonRepository repository)
+        public PersonService(PersonRepository repository)
         {
             _repository = repository;
         }
 
 
-        public List<Person> GetContacts()
+        public List<Person> GetPeople()
         {
             var result = _repository.GetAll();
             RemovePotentialHibernateImplementationsOfIList(result);
             return (List<Person>)result;
         }
 
-        public Person GetContact(string id)
+        public Person GetPerson(string id)
         {
             var result = _repository.GetPerson(new Guid(id));
             RemovePotentialHibernateImplementationsOfIList(result);

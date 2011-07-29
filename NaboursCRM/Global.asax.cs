@@ -11,7 +11,7 @@ namespace NaboursCRM
 
         void Application_Start(object sender, EventArgs e)
         {
-            RouteTable.Routes.Add(new ServiceRoute("Contacts", new WebServiceHostFactory(), typeof(Contacts)));
+            RouteTable.Routes.Add(new ServiceRoute("Contacts", new WebServiceHostFactory(), typeof(PersonService)));
 
         }
 

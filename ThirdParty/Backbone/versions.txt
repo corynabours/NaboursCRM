@@ -1,0 +1,2 @@
+Backbone.js:  http://documentcloud.github.com/backbone/	0.5.2
+Underscore.js: http://documentcloud.github.com/underscore/ 1.1.7
