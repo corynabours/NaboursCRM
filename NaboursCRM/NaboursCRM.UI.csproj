@@ -64,13 +64,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Contacts.svc" />
+    <Content Include="controls\controlList.js" />
+    <Content Include="controls\list\list.htm" />
+    <Content Include="controls\list\listitem.htm" />
+    <Content Include="controls\list\listModule.js" />
+    <Content Include="controls\list\listTemplates.js" />
+    <Content Include="controls\list\listView.js" />
+    <Content Include="controls\list\listPresenter.js" />
+    <Content Include="default.htm" />
+    <Content Include="lib\jquery-hotkeys\jquery.hotkeys.js" />
+    <Content Include="lib\jquery-tmpl\jquery.tmpl.js" />
+    <Content Include="lib\jquery-ui\jquery-ui.js" />
+    <Content Include="lib\jquery\jquery.js" />
+    <Content Include="lib\json2\json2.js" />
+    <Content Include="lib\requirejs\i18n.js" />
+    <Content Include="lib\requirejs\require.js" />
+    <Content Include="lib\requirejs\text.js" />
+    <Content Include="modules\contacts\contactModule.js" />
+    <Content Include="modules\modulelist.js" />
+    <Content Include="Scripts\loadapplication.js" />
     <Content Include="Scripts\Math.js" />
     <Content Include="Styles\Site.css" />
-    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.4.1.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -80,13 +95,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
