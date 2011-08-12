@@ -1,12 +1,10 @@
 ﻿.item_detail_level,
-.leftsideList
+.leftsideList,
 .belowListMenu
 {
-	display:inline;
 	float: left;
 	position: relative;
 	margin-left: 7px;
-	margin-right: 7px;    
 }
 
 .leftsideList
@@ -14,7 +12,40 @@
     width: 314px;
 }
 
+.list_container
+{
+    border: 1px solid blue;
+    border-radius: 4px 4px 4px 4px;
+}
+
 .belowListMenu
 {
     width: 642px;
+}
+
+.list
+{
+    width: 984px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.list_details
+{
+    border: 1px solid blue;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.toolbar
+{
+    min-height: 24px;
+    font-size: 11px;
+    margin-bottom: 4px;
+    margin-top: 20px;
+    text-align: right;    
 }
