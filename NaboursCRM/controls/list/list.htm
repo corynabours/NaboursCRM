@@ -1,9 +1,40 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
+﻿<div class="list">
+    <div class="leftsideList">
+        <div id="items_menu">
+            <div id="item_detail_level" class="item_detail_level"></div>
+        </div>
+        <div id="list_toolbar" class="toolbar">
+            <button id="btn_new">${titles.NEW}</button>
+            <button id="btn_refresh">${titles.REFRESH}</button>
+        </div>
+        <div class="list_container">
+            <ul id="list_items" class="list_items ui-widget ui-widget-content
+                ui-corner-all">
+                <li class="list_item first_list_item"><div class="loading"></div></li>
+            </ul>
+            <div id="no_items" class="padded ui-helper-hidden">
+                ${titles.NO_ITEMS}
+            </div>
+        </div>
+    </div>
+    <div class="belowListMenu">
+        <h3 class="item_name">
+            <span id="ctr_item_name"></span>
+            <span id="item_state" class="ui-helper-hidden"></span>
+        </h3>
+        <div id="item_toolbar" class="toolbar with_margin ui-widget">
+            {{each buttons}}
+            <button id="${$value.id}"
+                {{if $value.readOnly}} data-read-only="true"{{/if}}>
+                ${$value.label}
+            </button>
+            {{/each}}
+        </div>
+        <div id="list_details" class="ui-widget ui-widget-content
+            ui-corner-all">
+            <div class="padded">${titles.SELECT_ITEM_FROM_LIST}</div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
 
-</body>
-</html>

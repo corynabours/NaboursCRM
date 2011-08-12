@@ -1,3 +1,5 @@
 ﻿define([
     "./contacts/contactModule"
-], function () { return [].slice.call(arguments); });
+], function () {
+    return [].slice.call(arguments);
+});

@@ -1,6 +1,7 @@
 ﻿define(["./listTemplates"],
 function (templates) {
     function View() {
+        var view = this;
         this.content = $.tmpl(templates.main);
     }
 
@@ -11,5 +12,6 @@ function (templates) {
             this.content.find("no_items").show();
         }
     };
-    return view;
+
+    return View;
 });

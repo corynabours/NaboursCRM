@@ -80,10 +80,18 @@
     <Content Include="lib\requirejs\i18n.js" />
     <Content Include="lib\requirejs\require.js" />
     <Content Include="lib\requirejs\text.js" />
+    <Content Include="modules\contacts\contactListPresenter.js" />
+    <Content Include="modules\contacts\contactListView.js" />
     <Content Include="modules\contacts\contactModule.js" />
     <Content Include="modules\modulelist.js" />
+    <Content Include="Scripts\application.js" />
+    <Content Include="Scripts\component.js" />
+    <Content Include="Scripts\componentmanager.js" />
     <Content Include="Scripts\loadapplication.js" />
     <Content Include="Scripts\Math.js" />
+    <Content Include="Scripts\screen.js" />
+    <Content Include="Styles\all.css" />
+    <Content Include="Styles\list.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -99,19 +107,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NaboursCRM.Service\NaboursCRM.Service.csproj">

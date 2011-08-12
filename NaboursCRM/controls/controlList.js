@@ -1,3 +1,5 @@
 ﻿define([
     "./list/listModule"
-], function () { return [].slice.call(arguments); });
+], function () {
+    return [].slice.call(arguments); 
+});

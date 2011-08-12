@@ -1,6 +1,6 @@
 ﻿define([
     "text!./list.htm",
-    "text!./listitem.html"
+    "text!./listitem.htm"
 ],
 function (main, item) {
     return {
